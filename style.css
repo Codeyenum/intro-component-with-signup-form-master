@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+:root {
+   /* Primary */
+   --Red: hsl(0, 100%, 74%) ;    /* background, links and input alert */
+   --Green: hsl(154, 59%, 51%);     /* trial button */
+
+   /* Accent */
+   --Blue: hsl(248, 32%, 49%);      /* trial box */
+
+   /* Neutral */
+   --Dark-Blue: hsl(249, 10%, 26%);    /* placeholders */
+   --Grayish-Blue: hsl(246, 25%, 77%);    /*  */
+}
+
+* {
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+}
+
+html {
+   font-size: 16px;
+}
+
+body {
+   font-family: 'Poppins', sans-serif;
+   background-image: url("./images/bg-intro-mobile.png");
+   background-color: var(--Red);
+   background-blend-mode: multiply;
+   color: rgb(250, 240, 240);
+}
+
+main {
+   display: flex;
+   flex-direction: column;
+   padding: 20px;
+   text-align: center;
+}
+
+.text_section {
+   width: 100%;
+   margin: 1.5rem 0;
+}
+
+.text_section h1 {
+   font-size: 1.75rem;
+   line-height: 2.3rem;
+   margin: 1.85rem 0 1rem;
+   padding: 1rem;
+}
+
+.text_section p {
+   font-size: 1rem;
+}
+
+.trial_box {
+   background-color: var(--Blue);  
+   border-radius: 7.5px; 
+   box-shadow: 0 10px 2px -2px rgba(0, 0, 0, 0.247);
+   display: flex;
+   height: 5rem;
+   margin-top: 1.85rem;
+   width: 100%;
+}
+
+.trial_box p {
+   font-size: 1rem;
+   margin: auto;
+   width: 65%;
+}
+
+.trial_box strong {
+   font-weight: 600;
+}
+
+.registration_form {
+   background-color: rgb(250, 240, 240);
+   border-radius: 7.5px; 
+   box-shadow: 0 10px 2px -2px rgba(0, 0, 0, 0.247);
+   margin: 1.35rem 0 2rem;
+   padding: 22.5px;
+}
+
+::placeholder {
+   font-family: 'Poppins', sans-serif;
+   font-size: .875rem;
+   font-weight: 600;
+}
+
+.registration_form input, .registration_form button {
+   background-color: rgb(250, 240, 240);
+   border: 1px solid var(--Grayish-Blue);
+   border-radius: 3.5px; 
+   height: 3.5rem;
+   margin-bottom: 1rem;
+   padding: 0 15px;
+   width: 100%;
+}
+
+.registration_form button {
+   background-color: var(--Green);
+   border: 0px;
+   box-shadow: 2px 7px 3px -3px hsl(154deg 42% 48%);
+   color: rgb(250, 240, 240);
+   font-size: .9rem;
+   font-weight: 600;
+}
+
+.registration_form p {
+   color: var(--Grayish-Blue);
+   font-size: 0.7rem;
+   font-weight: 500;
+   padding: 0 1rem;
+}
+
+.registration_form a {
+   color: var(--Red);
+   font-weight: 700;
+   text-decoration: none;
+}
+
+@media screen and (min-width: 720px) {
+
+   body {
+      background-image: url(./images/bg-intro-desktop.png);
+   }
+
+   main {
+      flex-direction: row;
+   }
+
+   .text_section {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 50%;
+      text-align: left;
+      margin: 0;
+      padding: 0 3.5rem 0 7.5rem;
+   }
+   
+   .text_section h1 {
+      font-size: 2.75rem;
+      line-height: 2.95rem;
+      font-weight: 700;
+      padding: 0rem;
+   }
+   
+   .text_section p {
+      font-size: .9rem;
+   }
+
+   .form_section {
+      width: 35rem;
+      max-width: 560px;
+   }
+
+   .trial_box {
+      display: flex;
+      height: 3.35rem;
+      margin-top: 1.85rem;
+      width: 100%;
+   }
+   
+   .trial_box p {
+      font-size: 1rem;
+      margin: auto;
+      width: 65%;
+   }
+   
+   .trial_box strong {
+      font-weight: 600;
+   }
+}
