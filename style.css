@@ -1,16 +1,30 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
+@supports selector(:focus-visible) {
+   :focus {
+      /* Removes the focus indicator on mouse-focus for browsers
+        that do support :focus-visible */
+      outline: none;
+      background: transparent;
+   }
+}
+
 :root {
    /* Primary */
-   --Red: hsl(0, 100%, 74%) ;    /* background, links and input alert */
-   --Green: hsl(154, 59%, 51%);     /* trial button */
+   --Red: hsl(0, 100%, 74%);
+   /* background, links and input alert */
+   --Green: hsl(154, 59%, 51%);
+   /* trial button */
 
    /* Accent */
-   --Blue: hsl(248, 32%, 49%);      /* trial box */
+   --Blue: hsl(248, 32%, 49%);
+   /* trial box */
 
    /* Neutral */
-   --Dark-Blue: hsl(249, 10%, 26%);    /* placeholders */
-   --Grayish-Blue: hsl(246, 25%, 77%);    /*  */
+   --Dark-Blue: hsl(249, 10%, 26%);
+   /* placeholders */
+   --Grayish-Blue: hsl(246, 25%, 77%);
+   /*  */
 }
 
 * {
@@ -38,6 +52,8 @@ main {
    text-align: center;
 }
 
+/* ----START OF TEXT SECTION STYLING---- */
+
 .text_section {
    width: 100%;
    margin: 1.5rem 0;
@@ -54,9 +70,13 @@ main {
    font-size: 1rem;
 }
 
+/* ----END OF TEXT SECTION STYLING---- */
+/* ----START OF FORM SECTION STYLING---- */
+
+/* Start of Trial Box Styling */
 .trial_box {
-   background-color: var(--Blue);  
-   border-radius: 7.5px; 
+   background-color: var(--Blue);
+   border-radius: 7.5px;
    box-shadow: 0 10px 2px -2px rgba(0, 0, 0, 0.247);
    display: flex;
    height: 5rem;
@@ -73,13 +93,26 @@ main {
 .trial_box strong {
    font-weight: 600;
 }
+/* End of Trial Box Styling */
 
+/* Start of General Form Styling */
 .registration_form {
    background-color: rgb(250, 240, 240);
-   border-radius: 7.5px; 
+   border-radius: 7.5px;
    box-shadow: 0 10px 2px -2px rgba(0, 0, 0, 0.247);
    margin: 1.35rem 0 2rem;
    padding: 22.5px;
+}
+
+.registration_form input,
+.registration_form button {
+   background-color: rgb(250, 240, 240);
+   border: 1px solid var(--Grayish-Blue);
+   border-radius: 3.5px;
+   height: 3.5rem;
+   margin-bottom: 1rem;
+   padding: 0 15px;
+   width: 100%;
 }
 
 ::placeholder {
@@ -88,23 +121,27 @@ main {
    font-weight: 600;
 }
 
-.registration_form input, .registration_form button {
-   background-color: rgb(250, 240, 240);
-   border: 1px solid var(--Grayish-Blue);
-   border-radius: 3.5px; 
-   height: 3.5rem;
-   margin-bottom: 1rem;
-   padding: 0 15px;
-   width: 100%;
+.registration_form input:hover {
+   border: 1px solid var(--Blue);
+   cursor: pointer;
+}
+
+.registration_form input:focus-visible {
+   border: 2px solid var(--Blue);
 }
 
 .registration_form button {
    background-color: var(--Green);
    border: 0px;
-   box-shadow: 2px 7px 3px -3px hsl(154deg 42% 48%);
    color: rgb(250, 240, 240);
    font-size: .9rem;
    font-weight: 600;
+}
+
+.registration_form button:hover {
+   cursor: pointer;
+   font-size: .95rem;
+   opacity: .85;
 }
 
 .registration_form p {
@@ -119,6 +156,50 @@ main {
    font-weight: 700;
    text-decoration: none;
 }
+/* End of General Form Styling */
+
+/* Start of Form Validation Styling */
+.input_field {
+   position: relative;
+}
+
+.input_field.success input {
+   border: 2px solid var(--Green);
+}
+
+.input_field.error input {
+   border: 2px solid var(--Red);
+   margin-bottom: 2rem;
+}
+
+small {
+   font-size: 14px;
+   visibility: hidden;
+   color: hsl(0, 100%, 74%);
+   position: absolute;
+   right: 0;
+   bottom: -10px;
+   margin: 1rem;
+}
+
+.input_field.error small {
+   visibility: visible;
+}
+
+.error_icon {
+   position: absolute;
+   right: 10px;
+   top: 15px;
+   visibility: hidden;
+}
+
+.input_field.error .error_icon {
+   visibility: visible;
+}  
+/* End of Form Validation Styling */
+
+/* ----END OF FORM SECTION STYLING---- */
+/* ----START OF RESPONSIVE STYLING---- */
 
 @media screen and (min-width: 720px) {
 
@@ -134,26 +215,26 @@ main {
       display: flex;
       flex-direction: column;
       justify-content: center;
-      width: 50%;
-      text-align: left;
       margin: 0;
       padding: 0 3.5rem 0 7.5rem;
+      width: 50%;
+      text-align: left;
    }
-   
+
    .text_section h1 {
-      font-size: 2.75rem;
-      line-height: 2.95rem;
+      font-size: 2.75rem;      
       font-weight: 700;
+      line-height: 2.95rem;
       padding: 0rem;
    }
-   
+
    .text_section p {
       font-size: .9rem;
    }
 
-   .form_section {
-      width: 35rem;
+   .form_section {      
       max-width: 560px;
+      width: 35rem;
    }
 
    .trial_box {
@@ -162,14 +243,16 @@ main {
       margin-top: 1.85rem;
       width: 100%;
    }
-   
+
    .trial_box p {
       font-size: 1rem;
       margin: auto;
       width: 65%;
    }
-   
+
    .trial_box strong {
       font-weight: 600;
    }
 }
+
+/* ----END OF RESPONSIVE STYLING---- */
