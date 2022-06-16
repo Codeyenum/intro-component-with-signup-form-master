@@ -28,7 +28,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Codeyenum Intro Sign Up Form Component](https://www.frontendmentor.io/solutions/fylo-landing-page-with-html-and-css-pHvUFYacab)
+- Solution URL: [Codeyenum Intro Sign Up Form Component](https://www.frontendmentor.io/solutions/intro-component-with-sign-up-form-qUGXW-c0XK)
 - Live Site URL: [Intro Component with Sign Up Form](https://intro-signup-component.netlify.app/)
 
 ## My process
