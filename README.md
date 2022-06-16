@@ -28,8 +28,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Codeyenum Fylo Landing Page](https://www.frontendmentor.io/solutions/fylo-landing-page-with-html-and-css-pHvUFYacab)
-- Live Site URL: [Fylo Landing Page](https://olise-fylo-landing-page.netlify.app/)
+- Solution URL: [Codeyenum Intro Sign Up Form Component](https://www.frontendmentor.io/solutions/fylo-landing-page-with-html-and-css-pHvUFYacab)
+- Live Site URL: [Intro Component with Sign Up Form](https://intro-signup-component.netlify.app/)
 
 ## My process
 
