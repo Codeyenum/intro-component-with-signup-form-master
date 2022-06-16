@@ -40,11 +40,14 @@ Users should be able to:
 - CSS Flex-box
 - CSS hover effects
 - Mobile-first workflow
+- JavaScript
 
 ### What I learned
 
 - How to work with CSS layouts, flex-box, borders and fonts
 - How to improve design responsiveness with media queries
+- I learnt more on pseudo classes like :hover, :focus, :enabled and got to practice using a couple of them
+- I learnt how to style and validate forms using JavaScript, I got to put some DOM manipulation into practice
 
 
 ## Author
